@@ -4,7 +4,7 @@ We abstract the functionality to read the sensor information inside the
 getSensorReadings function. This function is also asyncronous. It accepts a callback
 function as an argument
 */
-const getSensorReadings = (callback) => {
+const getReadings = (callback) => {
   sensor.read(22, 26, function (err, temperature, humidity) {
     if (err) {
       /*
@@ -21,4 +21,4 @@ const getSensorReadings = (callback) => {
   });
 };
 // Export the function so it can be accessed externally
-module.exports = getSensorReadings;
+module.exports = getReadings;

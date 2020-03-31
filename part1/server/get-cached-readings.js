@@ -1,4 +1,4 @@
-const getSensorReadings = require('./get-readings');
+const getReadings = require('./get-readings');
 // Initiate the cache. In our case it is a variable stored in memory
 const cache = { temperature: null,
                   humidity: null 
@@ -6,7 +6,7 @@ const cache = { temperature: null,
 
 // Get the sensor readings every 2 secs
 setInterval(() => {
-  getSensorReadings((err, temperature, humidity) => {
+  getReadings((err, temperature, humidity) => {
     if (err) {
       return console.error(err);
     };
